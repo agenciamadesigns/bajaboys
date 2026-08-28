@@ -17,22 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 2. TRANSICIÓN SUAVE ENTRE PÁGINAS
-    const pageLinks = document.querySelectorAll('.transition-link');
 
-    pageLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetUrl = this.href;
-            
-            document.body.classList.remove('fade-in');
-            document.body.classList.add('fade-out');
-
-            setTimeout(() => {
-                window.location.href = targetUrl;
-            }, 400); 
-        });
-    });
 
     // 3. FORMULARIO A WHATSAPP
     const waForm = document.getElementById('wa-form');
