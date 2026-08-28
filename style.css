@@ -1205,3 +1205,50 @@ nav {
         height: 220px;
     }
 }
+
+/* =========================================
+   PANTALLA DE BIENVENIDA (SPLASH SCREEN)
+   ========================================= */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111; /* Fondo oscuro elegante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegura que esté por encima de todo */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.splash-content {
+    text-align: center;
+    animation: pulseLogo 1s infinite alternate;
+}
+
+.splash-logo {
+    max-width: 220px; /* Tamaño de tu logo en la pantalla de carga */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Clase para ocultar el splash cuando termine el tiempo */
+/* =========================================
+   PANTALLA DE BIENVENIDA (SPLASH SCREEN)
+   ========================================= */
+#splash-screen.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Evita que bloquee clics después de ocultarse */
+}
+
+/* Pequeña animación de parpadeo/respiro al logotipo */
+@keyframes pulseLogo {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}

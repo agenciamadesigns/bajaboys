@@ -5,39 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baja Boys Towing - Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logotiposinfondo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="fade-in">
 
-    <nav>
-            <a href="index.html" class="logo-container transition-link">
-                <img src="img/logotiposinfondo.png" alt="Baja Boys Towing Logo" class="logo-img">
-                <div class="logo-text">
-                    <span class="brand-name">BAJA BOYS</span>
-                    <span class="brand-sub">TOWING</span>
-                </div>
-            </a>
+    <!-- SPLASH SCREEN CORREGIDO (CON PUNTTER-EVENTS PARA QUE NO BLOQUEE CLICS) -->
+    <div id="splash-screen" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: radial-gradient(circle, #1a1a1a 0%, #000000 100%); display: flex; justify-content: center; align-items: center; z-index: 999999; transition: opacity 0.6s ease;">
+        <div style="text-align: center; animation: logoEntry 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
             
-            <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <!-- Contenedor del Logo con brillo elegante -->
+            <div style="padding: 20px; border-radius: 50%; background: rgba(255, 255, 255, 0.02); box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); display: inline-block;">
+                <img src="img/logotiposinfondo.png" alt="Baja Boys Towing" style="max-width: 280px; width: 85vw; height: auto; display: block; margin: 0 auto;">
             </div>
 
-            <!-- SOLO TEXTOS (Se centrarán en PC) -->
-            <div class="nav-links" id="nav-links">
-                <a href="index.html" class="transition-link">HOME</a>
-                <a href="servicios.html" class="transition-link">SERVICES</a>
-                <a href="galeria.html" class="transition-link">GALLERY</a>
-                <a href="contacto.html" class="transition-link">CONTACT</a>
-                
-                <!-- Este botón solo aparecerá cuando abras el menú en celular -->
-                <a href="tel:6023502814" class="call-btn-nav mobile-only">CALL NOW</a>
-            </div>
+        </div>
+    </div>
 
-            <!-- BOTÓN A LA DERECHA (Solo visible en PC) -->
-            <a href="tel:6023502814" class="call-btn-nav desktop-only">CALL NOW</a>
-        </nav>
+    <!-- Animación de entrada fluida -->
+    <style>
+        @keyframes logoEntry {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+
+    <nav>
+        <a href="index.html" class="logo-container transition-link">
+            <img src="img/logotiposinfondo.png" alt="Baja Boys Towing Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="brand-name">BAJA BOYS</span>
+                <span class="brand-sub">TOWING</span>
+            </div>
+        </a>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-links" id="nav-links">
+            <a href="index.html" class="transition-link">HOME</a>
+            <a href="servicios.html" class="transition-link">SERVICES</a>
+            <a href="galeria.html" class="transition-link">GALLERY</a>
+            <a href="contacto.html" class="transition-link">CONTACT</a>
+            
+            <a href="tel:6023502814" class="call-btn-nav mobile-only">CALL NOW</a>
+        </div>
+
+        <a href="tel:6023502814" class="call-btn-nav desktop-only">CALL NOW</a>
+    </nav>
 
     <header class="hero-section">
         <div class="hero-content">
@@ -55,17 +73,19 @@
         </div>
 
         <div class="floating-contact-container">
+            
+            <!-- FORMULARIO CONFIGURADO PARA ABRIR SMS AUTOMÁTICAMENTE -->
             <div class="contact-box form-box">
                 <h3>BOOK ONLINE</h3>
-                <form id="wa-form">
+                <form id="sms-form">
                     <div class="form-row">
-                        <input type="text" id="wa-name" placeholder="Name" required>
-                        <input type="tel" id="wa-phone" placeholder="Phone" required>
-                        <input type="email" id="wa-email" placeholder="Email">
+                        <input type="text" id="sms-name" placeholder="Name" required>
+                        <input type="tel" id="sms-phone" placeholder="Phone" required>
+                        <input type="email" id="sms-email" placeholder="Email">
                     </div>
                     <div class="form-row">
-                        <input type="date" id="wa-date" required>
-                        <input type="time" id="wa-time" required>
+                        <input type="date" id="sms-date" required>
+                        <input type="time" id="sms-time" required>
                         <button type="submit" class="btn btn-primary btn-block"><i class="far fa-calendar-check"></i> Book Now</button>
                     </div>
                 </form>
@@ -88,9 +108,7 @@
     
     <section class="about-section">
         <div class="about-container">
-            
             <div class="about-images">
-                
                 <img src="img/img2.jpeg" alt="Baja Boys Towing Truck" class="img-main">
             </div>
 
@@ -111,7 +129,6 @@
 
                 <a href="nosotros.html" class="btn btn-primary transition-link">LEARN MORE</a>
             </div>
-            
         </div>
     </section>
 
@@ -119,9 +136,7 @@
     <section class="cta-banner-section">
         <div class="cta-banner-content">
             <h2>LET'S GET YOUR VEHICLE MOVING.</h2>
-            
             <p>Our priority at <strong>Baja Boys Towing</strong> is to deliver dependable, rapid, and professional roadside assistance to our community. We work tirelessly to be the trusted team you can rely on to safely handle your vehicle in any emergency.</p>
-            
             <a href="tel:6023502814" class="btn btn-primary cta-btn">GET HELP NOW</a>
         </div>
     </section>
@@ -176,10 +191,10 @@
             <div class="footer-col links-col">
                 <h4>LINKS</h4>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="nosotros.html">About Us</a></li>
-                    <li><a href="servicios.html">Services</a></li>
-                    <li><a href="#contacto">Contact</a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="servicios.html">SERVICES</a></li>
+                    <li><a href="galeria.html">GALLERY</a></li>
+                    <li><a href="contacto.html">CONTACT</a></li>
                 </ul>
             </div>
 
@@ -210,6 +225,47 @@
             <p>&copy; 2026 Baja Boys Towing. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- SCRIPT DEL SPLASH SCREEN -->
+    <script>
+    (function() {
+        setTimeout(function() {
+            var splash = document.getElementById('splash-screen');
+            if (splash) {
+                splash.style.opacity = '0';
+                splash.style.pointerEvents = 'none'; // Evita que bloquee clics
+                setTimeout(function() {
+                    splash.style.display = 'none';
+                }, 500); 
+            }
+        }, 1000);
+    })();
+    </script>
+
+    <!-- SCRIPT PARA CONVERTIR EL FORMULARIO EN MENSAJE SMS -->
+    <script>
+    document.getElementById('sms-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var name = document.getElementById('sms-name').value;
+        var phone = document.getElementById('sms-phone').value;
+        var email = document.getElementById('sms-email').value;
+        var date = document.getElementById('sms-date').value;
+        var time = document.getElementById('sms-time').value;
+
+        var message = "¡Hola! Quiero hacer una reservación:\n" +
+                      "Nombre: " + name + "\n" +
+                      "Teléfono: " + phone + "\n" +
+                      "Email: " + email + "\n" +
+                      "Fecha: " + date + "\n" +
+                      "Hora: " + time;
+
+        var targetPhone = "16023502814";
+        var encodedMessage = encodeURIComponent(message);
+
+        window.location.href = "sms:" + targetPhone + "?body=" + encodedMessage;
+    });
+    </script>
 
     <script src="script.js"></script>
 </body>

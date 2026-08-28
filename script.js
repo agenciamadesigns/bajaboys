@@ -85,3 +85,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+window.addEventListener("load", function () {
+    const splashScreen = document.getElementById("splash-screen");
+
+    // Espera exactamente 1 segundo (1000 ms) y desvanece
+    setTimeout(() => {
+        if (splashScreen) {
+            splashScreen.classList.add("fade-out");
+            
+            // Opcional: lo elimina del DOM después de la animación para liberar memoria
+            setTimeout(() => {
+                splashScreen.remove();
+            }, 500);
+        }
+    }, 1000);
+});
