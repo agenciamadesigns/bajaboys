@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="img/logotiposinfondo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    /* Estilos para que los inputs de fecha y hora se vean bien en celulares */
+    input[type="date"], input[type="time"] {
+        color: #333; /* Color del texto cuando el usuario selecciona una fecha/hora */
+        background-color: #fff; /* Fondo blanco para que sean perfectamente legibles */
+    }
+
+    /* Para que en navegadores web oscuros los placeholders o íconos no se pierdan */
+    input[type="date"]::-webkit-calendar-picker-indicator,
+    input[type="time"]::-webkit-inner-spin-button {
+        cursor: pointer;
+        filter: invert(0); /* Ajusta el color del calendario/reloj si es necesario */
+    }
+</style>
 </head>
 <body class="fade-in">
 
