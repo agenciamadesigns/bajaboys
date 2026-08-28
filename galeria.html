@@ -10,6 +10,26 @@
 </head>
 <body class="fade-in">
 
+        <!-- SPLASH SCREEN CORREGIDO (CON PUNTTER-EVENTS PARA QUE NO BLOQUEE CLICS) -->
+    <div id="splash-screen" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: radial-gradient(circle, #1a1a1a 0%, #000000 100%); display: flex; justify-content: center; align-items: center; z-index: 999999; transition: opacity 0.6s ease;">
+        <div style="text-align: center; animation: logoEntry 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+            
+            <!-- Contenedor del Logo con brillo elegante -->
+            <div style="padding: 20px; border-radius: 50%; background: rgba(255, 255, 255, 0.02); box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); display: inline-block;">
+                <img src="img/logotiposinfondo.png" alt="Baja Boys Towing" style="max-width: 280px; width: 85vw; height: auto; display: block; margin: 0 auto;">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Animación de entrada fluida -->
+    <style>
+        @keyframes logoEntry {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+
     <nav>
             <a href="index.html" class="logo-container transition-link">
                 <img src="img/logotiposinfondo.png" alt="Baja Boys Towing Logo" class="logo-img">
